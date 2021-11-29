@@ -1,0 +1,126 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CalorieCalculator</title>
+    <link rel="stylesheet" href="C:\Users\freeman\Documents\DevProject\Sly\.vscode\resources\CSS\Untitled-2.css"
+        type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="RecipesPage">
+    <header class="pageheader container-fluid">
+        <nav role="navigation" class="Navbar">
+            <div class="row height">
+                <div class="col height">
+                    <ul class="navbar" role="menubar">
+                        <li class="NavItem"><a href="Main.html">Home</a></li>
+                        <li class="NavItem"><a href="Workouts.html">Workouts</a></li>
+                        <li class="NavItem"><a href="CalorieCalculator.html">Calorie Calculator</a></li>
+                        <li class="NavItem"><a href="Recipes.html">Recipes</a></li>
+                    </ul>
+                </div>
+                <div class="colcenter height">Health Manager</div>
+        </nav>
+    </header>
+    <div class="LINE"></div>
+    <main>
+        <div class="Cal">
+            <div class="calculator">Calculator</div>
+            <div class="wrapper">
+                <form>
+                    <div class="labelRow">
+                        <label for="Food option">Enter Food:</label>
+                    </div>
+                    <div class="inputRow">
+                        <select name="Protein" id="Protein">
+                            <optgroup label="Chicken">
+                                <option value="DM Chicken">DM Chicken</option>
+                                <option value="WM Chicken">WM Chicken</option>
+                            </optgroup>
+                            <optgroup label="Beef">
+                                <option value="Steak">Steak</option>
+                            </optgroup>
+                            <optgroup label="Seafood">
+                                <option value="Shrimp">Shrimp</option>
+                                <option value="Crab">Crab</option>
+                                <option value="Lobster">Lobster</option>
+                            </optgroup>
+                            <optgroup label="Carbs">
+                                <option value="Pasta">Pasta</option>
+                                <option value="Bread">Bread</option>
+                                <option value="Potatoe">Potatoe</option>
+                            </optgroup>
+                            <optgroup label="Vegatables">
+                                <option value="Corn">Corn</option>
+                                <option value="Green Beans">Green Beans</option>
+                                <option value="Broccoli">Broccoli</option>
+                                <option value="Carrots">Carrots</option>
+                                <option value="Asparagus">Asparagus</option>
+                            </optgroup>
+                            <br><br>
+                        </select>
+                        <div Class="Other">
+                            <div class="labelRow">
+                                <label for="Calories">Specific Calories</label>
+                            </div>
+                            <div class="inputRow">
+                                <input id="Specific amount of calories" type="number" />
+                            </div>
+                            <div class="btnRow">
+                                <input type="button" value="add to list" id="add2" />
+                            </div>
+                        </div>
+                </form>
+            </div>
+        </div>
+        <div class="listContainer">
+            <div class="grid-title">Protein</div>
+            <div class="grid-item">
+                <ul class="Plist" id="Plist">
+
+                </ul>
+            </div>
+            <div class="grid-title">Calories</div>
+            <div class="grid-item">
+                <ul class="clist" id="clist">
+
+                </ul>
+            </div>
+            <div class="grid-title">Total:</div>
+
+            <div class="total" id="total"></div>
+
+        </div>
+    </main>
+    <footer>
+        <div class="BTLINE"></div>
+        <div class="Socials">
+            <a href="instgram.com" class="fa fa-instagram"></a>
+            <a href="instgram.com" class="fa fa-twitter"></a>
+            <a href="instgram.com" class="fa fa-youtube"></a>
+        </div>
+    </footer>
+    <script type="text/javascript">
+        var sum = 0;
+        document.getElementById("add2").onclick = function () {
+
+            var node3 = document.createElement("li");
+            node3.className = "ele";
+            var text3 = document.getElementById("Protein").value;
+            var textnode3 = document.createTextNode(text3);
+            var node1 = document.createElement("li");
+            node1.className = "ele";
+            var text1 = document.getElementById("Specific amount of calories").value;
+            node1.innerHTML = text1;
+            node3.appendChild(textnode3);
+            sum += parseFloat(text1);
+            document.getElementById("Plist").appendChild(node3);
+            document.getElementById("clist").appendChild(node1);
+            document.getElementById("total").innerHTML = sum;
+
+        }
+    </script>
+</body>
+
+</html>

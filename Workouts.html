@@ -1,0 +1,151 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Workouts</title>
+    <link rel="stylesheet" href="C:\Users\freeman\Documents\DevProject\Sly\.vscode\resources\CSS\Untitled-2.css"
+        type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="RecipesPage">
+    <header class="pageheader container-fluid">
+        <nav role="navigation" class="Navbar">
+            <div class="row height">
+                <div class="col height">
+                    <ul class="navbar" role="menubar">
+                        <li class="NavItem"><a href="Main.html">Home</a></li>
+                        <li class="NavItem"><a href="Workouts.html">Workouts</a></li>
+                        <li class="NavItem"><a href="CalorieCalculator.html">Calorie Calculator</a></li>
+                        <li class="NavItem"><a href="Recipes.html">Recipes</a></li>
+                    </ul>
+                </div>
+                <div class="colcenter height">Health Manager</div>
+        </nav>
+    </header>
+    <main>
+        <div class="LINE"></div>
+        <div class="filter">
+            <div class="btncontainer ">
+                <div class="filterHeader">Filter</div>
+                <button class="btn active" data-filter=all>Show all</button>
+                <button class="btn" data-filter=Chest>Chest</button>
+                <button class="btn" data-filter=Arms>Arms</button>
+                <button class="btn" data-filter=Shoulders>Shoulders</button>
+                <button class="btn" data-filter=Back>Back</button>
+                <button class="btn" data-filter=Legs>Legs</button>
+                <button class="btn" data-filter=Abdominal>Abdominal</button>
+            </div>
+        </div>
+        </div>
+        <div class="grid-section col0 full-widthgrid">
+            <div class="menu-grid">
+                <div class="row">
+                    <div class="tile col6 col-lg3 font">
+                        <div class="recipe-tile">
+                            <a class="filterDiv Chest Shoulders"
+                                href="https://www.coachmag.co.uk/chest-exercises/8686/incline-bench-press" tabindex="1">
+                                <img class="w-100"
+                                    src="C:\Users\freeman\Documents\DevProject\Sly\.vscode\resources\images\incline-bench-press.jpg">Incline
+                                Bench Press
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tile col6 col-lg3 font">
+                        <a class="filterDiv Chest"
+                            href="https://www.coachmag.co.uk/triceps-exercises/7483/how-to-do-the-close-grip-bench-press"
+                            tabindex="1">
+                            <img class="w-100"
+                                src="C:\Users\freeman\Documents\DevProject\Sly\.vscode\resources\images\2.2.jpg">Close-Grip
+                            Bench
+                        </a>
+                    </div>
+                    <div class="tile col6 col-lg3 font">
+                        <a class="filterDiv Back Legs"
+                            href="https://www.coachmag.co.uk/barbell-exercises/3725/how-to-deadlift" tabindex="1">
+                            <img class="w-100"
+                                src="C:\Users\freeman\Documents\DevProject\Sly\.vscode\resources\images\how_to_deadlift_b.jpg">Deadlift
+                        </a>
+                    </div>
+                    <div class="tile col6 col-lg3 font">
+                        <a class="filterDiv Abdominal"
+                            href="https://www.coachmag.co.uk/core-exercises/6334/how-to-do-a-plank-and-build-a-core-of-steel"
+                            tabindex="1">
+                            <img class="w-100"
+                                src="C:\Users\freeman\Documents\DevProject\Sly\.vscode\resources\images\plank.jpg">Planks
+                        </a>
+                    </div>
+                    <div class="tile col6 col-lg3 font">
+                        <a class="filterDiv Abdominal"
+                            href="https://www.coachmag.co.uk/exercises/abs-workout/3657/3a-hanging-leg-raise"
+                            tabindex="1">
+                            <img class="w-100"
+                                src="C:\Users\freeman\Documents\DevProject\Sly\.vscode\resources\images\hanging-leg-raise.jpg">Hanging
+                            Leg Raise
+                        </a>
+                    </div>
+                    <div class="tile col6 col-lg3 font">
+                        <a class="filterDiv Legs"
+                            href="https://www.coachmag.co.uk/exercises/treadmill-workouts/3625/treadmill-workouts"
+                            tabindex="1">
+                            <img class="w-100"
+                                src="C:\Users\freeman\Documents\DevProject\Sly\.vscode\resources\images\treadmill-workouts.jpg">Treadmil
+                            Workouts
+                        </a>
+                    </div>
+                    <div class="tile col6 col-lg3 font">
+                        <a class="filterDiv Back" href="https://www.coachmag.co.uk/back-exercises/9066/landmine-row"
+                            tabindex="1">
+                            <img class="w-100"
+                                src="C:\Users\freeman\Documents\DevProject\Sly\.vscode\resources\images\landmine-row.jpg">Landmine
+                            Row
+                        </a>
+                    </div>
+                    <div class="tile col6 col-lg3 font">
+                        <a class="filterDiv Arms" href="https://www.coachmag.co.uk/fitness/workouts/biceps-workouts"
+                            tabindex="1">
+                            <img class="w-100"
+                                src="C:\Users\freeman\Documents\DevProject\Sly\.vscode\resources\images\seated-dumbbell-curl.jpg">Bicep
+                            Curls
+                        </a>
+                    </div>
+                    <script src="Script.js"></script>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="BTLINE"></div>
+        <div class="Socials">
+            <a href="instgram.com" class="fa fa-instagram"></a>
+            <a href="instgram.com" class="fa fa-twitter"></a>
+            <a href="instgram.com" class="fa fa-youtube"></a>
+        </div>
+    </footer>
+    <script>
+        const btns = document.querySelectorAll(".btn");
+        const recipies = document.querySelectorAll(".filterDiv");
+
+        for (i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", (e) => {
+                e.preventDefault();
+
+                const filter = e.target.dataset.filter;
+
+                recipies.forEach((options) => {
+                    if (filter == "all") {
+                        options.style.display = "block"
+                    } else {
+                        if (options.classList.contains(filter)) {
+                            options.style.display = "block"
+                        } else {
+                            options.style.display = "none"
+                        }
+                    }
+                })
+            })
+        }
+    </script>
+</body>
+
+</html>
